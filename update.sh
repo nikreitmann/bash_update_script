@@ -1,5 +1,5 @@
 #!/bin/bash
-exec > $LOG 2>&1
+exec > $LOG/log_update_script.txt 2>&1
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -10,8 +10,8 @@ NOCOLOR="\033[0m"
 
 #____________________CONFIGURE_SCRIPT_____________
 
-#log file
-LOG="/root/update_script_log.txt"
+#log file path
+LOG="/root"
 
 #exclude package
 EXCLUDE=""
