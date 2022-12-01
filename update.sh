@@ -1,5 +1,5 @@
 #!/bin/bash
-exec > $LOG/log_update_script.txt 2>&1
+exec > $LOG/log_update_script.log 2>&1
 
 export DEBIAN_FRONTEND=noninteractive
 
