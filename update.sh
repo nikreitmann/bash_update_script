@@ -1,14 +1,13 @@
 #!/bin/bash
-exec > /root/log_update_script.log 2>&1
 
 export DEBIAN_FRONTEND=noninteractive
-
-#____________________VARIABLES____________________
-
 GREEN="\033[1;32m"
 NOCOLOR="\033[0m"
 
 #____________________CONFIGURE_SCRIPT_____________
+
+#log file path
+LOGPATH="/scripts/logs"
 
 #exclude package
 EXCLUDE=""
@@ -18,6 +17,7 @@ REBOOT="false"
 
 #____________________DOING_UPGRADE________________
 
+exec > $LOGPATH/log_update_script.log 2>&1
 echo -e
 echo -e "${GREEN}Current date: ${NOCOLOR}"
 echo -e $(date)
